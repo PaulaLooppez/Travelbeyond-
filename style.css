@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Urbanist:wght@400;600&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/*----------------------------------------------
+            AQUÍ EMPIEZA EL LOS ESTILOS
+         (ESTILOS GENERALES + TIPOGRAFÍA)
+------------------------------------------------ */
+
+/* Creo las variables */
+:root {
+  --primary-color: #3C2178; 
+  --secondary-color: #00A21A;
+  --background:#ffffff; 
+  --gradienteprincipal: linear-gradient(90deg, #360057 17.36%, #00A21A 90.45%);
+  --buttonactive: #231347;
+  --buttonsecunactive: #e0d4f9; 
+  --hover-color: #c9e9ce;  
+  --black:black; 
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+h2{
+  font-family: 'DotGothic16', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding:1rem; 
+  color: var(--primary-color);
+}
+  
+h1 {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 5rem;
+  color: var(--background); 
+}
+  
+h3, h4{
+  color: var(--primary-color);
+  width: 100%;
+  font-family: 'Urbanist', sans-serif;
+}
+  
+p{
+    font-family: 'Urbanist', sans-serif;
+}  
+
+a{
+  font-weight: 500;
+}  
+
+/*----------------------------------------------
+        (ESTILOS NAVEGADOR ORDENADOR)
+------------------------------------------------ */
+
+nav {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem;
+  padding-block: 1rem 0.8rem;
+  background-color: transparent;
+  transition: background-color 800ms cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+/*Cuando la clase active se agrega al nav, cambia el 
+ color de fondo del menú. */
+nav.active {
+  background-color: var(--background);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  transform: translate3d(0, -200%, 0);
+  position: absolute;
+  z-index: -1;
+  /* top: 3rem; */
+  left: 0;
+  right: 0;
+  background-color: var(--background); 
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav-links.activated {
+  transition: transform 0.4s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+.btn {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.btn--accent {
+  background-color: var(--primary-color);
+  color: var(--background); 
+  padding: 0.5rem 1rem;
+}
+
+.btn--menu {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: none;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  transition: transform 0.3s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+li[role="none"],
+.nav-link {
+  width: 100%;
+  display: block;
+  font-size: 1.1rem;
+}
+
+.btn--menu[aria-expanded="true"] {
+  transform: rotate(-180deg);
+}
+
+.btn--menu[aria-expanded="true"] + .nav-links {
+  transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 768px) {
+  .btn--menu {
+    display: none;
+  }
+  .nav-links {
+    position: static;
+    transform: translate3d(0, 0, 0);
+    flex-direction: row;
+    border: 0;
+    z-index: 0;
+    padding: 0;
+    inset: 0;
+    background-color: transparent;
+  }
+
+  nav.active .nav-link{
+  color: var(--primary-color);
+  }
+
+  nav.active .btn--accent{
+      color: var(--background);
+  }
+  
+  li[role="none"],
+  .nav-link {
+    width: initial;
+  }
+.btn {
+    color: var(--background);
+}
+}
+
+/* -----------------------------------------------------------
+                        CONTENEDOR SECCIÓN INICIAL                         
+-------------------------------------------------------------- */
+#contenedorprincipal{
+  width: 100%;
+  height: 100vh; /*ocupará toda la altura de la ventana visible en el navegador.*/
+  background: linear-gradient(90deg, #360057 17.36%, #00A21A 90.45%);
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed; /* Fondo fijo */
+  image-orientation:from-image;
+  z-index:0;
+  overflow: hidden;
+}
+
+.contenedor-texto {
+  display: inline-block;
+  align-items:center; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  Color: var(--background);
+  /*El siguinte estilo se utiliza para centrar un 
+  elemento horizontal y verticalmente en relación con
+  su contenedor padre, en este caso centra el texto 
+  respecto a la imagen*/
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 0;
+}
+
+header {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: relative;
+} 
+
+.header__img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: overlay;
+  padding-bottom:0;
+} 
+
+.button-link {
+  display: flex;
+  justify-content: center;  
+  margin-top: 5%;
+  /*hace que se convierte como un bloque lo
+  que evita que se superponga con el texto*/
+  padding: 1em 2em; /* Yo no he definico los padding, se adaptará el estilo 
+  según las configuraciones del navegador donde se visualicen */
+  text-decoration: none; /*Evita que se muestre como un enlace, no nos subraya el texto*/
+  background-color: var(--primary-color); /* Color de fondo del botón */
+  color: var(--background); /* Color del texto del botón */ /* Borde del botón */
+  border-radius: 1rem; /* Bordes redondeados */
+
+  
+}
+  
+.button-link:hover {
+  background-color: var(--buttonactive); /* Cambia el color de fondo al pasar el mouse */
+  color: var(--background); /* Cambia el color del texto al pasar el mouse */
+}
+
+
+/* -----------------------------------------------------------
+                        SECCIÓN SOBRE NOSOTROS                
+-------------------------------------------------------------- */
+
+#sobrenosotros{
+  padding: 6% 10%;
+  height: auto;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+
+/* -----------------------------------------------------------
+                        SECCIÓN BENEFICIOS                       
+-------------------------------------------------------------- */
+
+#beneficios-container {
+  height: auto;
+  background: var(--gradienteprincipal);
+  display: inline-block;
+  justify-items: center; /* Centra los elementos en el eje horizontal */
+  padding: 1.875rem 0rem;
+}
+
+#beneficios-container h2{
+  color: var(--background)
+}
+
+/* Estilos disposición de los elementos del menu */
+.beneficios-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  color: var(--background);
+  flex-direction: row;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-self: stretch;
+  gap: 1.2rem;
+}
+
+.seguridad, .comodidad, .exclusividad, .viajar {
+  flex: 1 4 250px;
+}
+     
+.item {
+  text-align: center;
+  border: 1px solid var(--background);
+  border-radius: 8px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  /* box-sizing: border-box; Incluye padding y border en el ancho total */
+  background-color: rgba(0, 0, 0, 0.4); 
+  padding: 1rem;
+}
+
+/* Estilos de los Png de beneficios */
+.item svg{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  border-radius: 8px;
+}
+   
+.item p, h3 {
+  margin-top: 2%;
+}
+
+.item h3 {
+  margin-top: 2%;
+  color: var(--background);
+}
+
+.item p {
+  font-size: 0.8em;
+  text-align: justify;
+}
+
+.item__image {
+  width: clamp(4rem, 10vw, 8rem);
+}
+
+/* interacciones mouse */
+
+.beneficios-cards .item:hover {
+  transform: scale(1.05);
+}
+
+/* -----------------------------------------------------------
+                        SECCIÓN TESTIMONIOS                
+-------------------------------------------------------------- */
+
+#testimonio-container{
+  position: relative;
+  margin-top:4%;
+  margin-bottom: 4%;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+
+.slider input {
+  visibility: hidden;
+  display: none;
+}
+  
+.slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.slider input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.slider input:nth-child(4):checked ~ .buttons label:nth-child(4){
+  opacity: 1;
+  scroll-margin: 1.2;
+  width: 40px;
+}
+
+.expertos  {
+  position: relative;
+  width: 400vw; /* Ajusta segÃºn sea necesario */
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding:0 1.8rem;
+}
+
+.firstslide, .secondslide, .thirdslide, .fourslide {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+  
+.expertos img {
+  border-radius: 0.625rem;
+  overflow: hidden; /* Para recortar el contenido que se desborda del contenedor */
+  width: 10.4375rem;
+  height: 10rem;
+  object-fit: cover
+}
+
+.slider input:nth-child(1):checked ~ .expertos {
+    transform: translateX(0);
+}
+  
+.slider input:nth-child(2):checked ~ .expertos {
+    transform: translateX(-100vw);
+}
+  
+.slider input:nth-child(3):checked ~ .expertos {
+    transform: translateX(-200vw);
+}
+
+.slider input:nth-child(4):checked ~ .expertos {
+    transform: translateX(-300vw);
+}
+
+/* Estilos botones del fromulario */
+
+.buttons {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+  
+.buttons label {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 1;
+  transition: 300ms ease-in-out;
+}
+  
+/* Estilos especiales testimonio-container */
+
+#testimonio-container h4, p {
+  text-align: center;
+  margin: 0.5rem;
+  margin-bottom: 0%;
+}
+
+#testimonio-container h3{
+  text-align: center;
+  padding-bottom: 1.8rem;
+}
+
+
+/* -----------------------------------------------------------
+                        SECCIÓN FORMULARIO              
+-------------------------------------------------------------- */
+/* estilos imagen del formulario */
+.imagen-formulario{
+  background-image: url("./img/formulario.png");
+  background-position: center center;
+  background-size: cover;
+  height: 20vh;
+  flex: 0 0 calc(50%);
+  position: relative;
+    
+}
+.imagen-formulario::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media(min-width:768px){
+    .imagen-formulario{
+      height: auto;
+      background-position: right;
+  }
+
+}
+@media(min-width:1200px){
+    .imagen-formulario{
+        background-position: center;
+    }
+}
+
+@media(min-width:768px){
+    .contenedor-formulario{
+        display: flex;
+    }
+}
+/* estilos formulario y sus campos */
+
+/* Padding general contenedor del formulario */
+.formulario {
+  padding: 2rem;
+  color: var(--primary-color);
+  box-sizing: border-box; /* Ajuste al modelo de caja */
+}
+
+.texto-formulario p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.entrada label, .entrada select {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.entrada input:hover, .entrada select:hover {
+  background-color: var(--hover-color); 
+}
+
+.placeholder {
+  width: 100%;
+}
+
+option {
+  color: #00A21A;
+  background: #231347;
+}
+
+.entrada input, .entrada select {
+  width: 100%;
+  padding: 1rem;
+  border-color: var(--primary-color);
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1rem;
+  height: auto;
+}
+
+/* Estilos para los campos del formulario en los que los labels van en paralelo */
+.datos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-self: stretch;
+  gap: 1rem;
+}
+
+.nombre, .apellidos, .pais, .telefono {
+  flex: 1 2 250px;
+}
+
+.comentario input {
+  height: 6rem;
+}
+
+/* estilos botones formulario */
+.formulariobbutton {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.button-link-later {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  padding: 1em 2em;
+  text-decoration: none;
+  color: var(--primary-color);
+  border-radius: 20px;
+  border-color: var(--primary-color);
+  background-color: var(--background);
+}
+
+.button-link-later:hover {
+  background-color: var(--buttonsecunactive);
+}
+
+
+/* --------------------------------------------------------------
+                        ESTILOS FOOTER
+----------------------------------------------------------------- */
+/* Contenedor principal del pie de página */
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sección verde del pie de página */
+.green-section {
+  background-color:var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 1rem;
+}
+
+/* Estilos para el logo en la sección verde */
+.logo img {
+  width: 100%; 
+  height: auto;
+}
+
+/* Estilos para los íconos de las redes sociales en la sección verde */
+.social-media {
+  display: flex; /* Muestra los íconos en una fila */
+  margin-top: 0.5rem; /* Ajusta según tu diseño */
+  width: 24rem;
+  height: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 2% 0%;
+}
+
+/* Sección morada del pie de página */
+.purple-section {
+  background-color: var(--primary-color); /* ajusta según tu diseño */
+  text-align: center;
+  padding: 2%;
+}
+
+/* Texto de derechos de autor en la sección morada */
+.copyright {
+  color: var(--background); 
+  margin-bottom: 0.5rem; 
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+/* Enlaces en el pie de página */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-right: 1rem; 
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.75rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color:var(--background);
+}
+
+/* --------------------------------------------------------------
+                        ANIMACIONES TEXTO
+----------------------------------------------------------------- */
+/* eleva un elemento desde una posición ligeramente descendida 
+(transform: translateY(2rem)) con opacidad cero hasta su posición 
+normal (transform: translateY(0)) con opacidad completa (opacity: 1) */
+@keyframes rise {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* aplica la animación rise con una duración de 0.8 segundos y una
+ función de temporización (ease-in-out). La propiedad forwards asegura 
+ que el elemento conserve los estilos finales de la animación. */
+.rise {
+    opacity: 0;
+    animation: rise 0.8s ease-in-out forwards;
+}
+  
+.fade-up {
+  opacity: 0;
+  transform: translate3d(0, 5rem, 0);
+  transition: transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+.fade-up.faded {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Este bloque ajusta el comportamiento para usuarios que prefieren 
+reducir o desactivar las animaciones. Desactiva todas las animaciones,
+ transiciones y el desplazamiento suave.*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+*,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
