@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#050307">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,800;1,600;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo-link" aria-label="Go to homepage">
+                <img src="./img/LOGO1.png" alt="logotravelbeyond">
+            </a>
+            <div class="nav-wrapper">
+            <button class="btn btn--menu" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Open mobile nav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M10.1417 2.25H3.76672C3.24896 2.25 2.82922 2.66973 2.82922 3.1875V9.5625C2.82922 10.0803 3.24896 10.5 3.76672 10.5H10.1417C10.6595 10.5 11.0792 10.0803 11.0792 9.5625V3.1875C11.0792 2.66973 10.6595 2.25 10.1417 2.25Z" stroke="#3C2178" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.3917 2.25H14.0167C13.499 2.25 13.0792 2.66973 13.0792 3.1875V9.5625C13.0792 10.0803 13.499 10.5 14.0167 10.5H20.3917C20.9095 10.5 21.3292 10.0803 21.3292 9.5625V3.1875C21.3292 2.66973 20.9095 2.25 20.3917 2.25Z" stroke="#3C2178" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.1417 12.5H3.76672C3.24896 12.5 2.82922 12.9197 2.82922 13.4375V19.8125C2.82922 20.3303 3.24896 20.75 3.76672 20.75H10.1417C10.6595 20.75 11.0792 20.3303 11.0792 19.8125V13.4375C11.0792 12.9197 10.6595 12.5 10.1417 12.5Z" stroke="#3C2178" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.3917 12.5H14.0167C13.499 12.5 13.0792 12.9197 13.0792 13.4375V19.8125C13.0792 20.3303 13.499 20.75 14.0167 20.75H20.3917C20.9095 20.75 21.3292 20.3303 21.3292 19.8125V13.4375C21.3292 12.9197 20.9095 12.5 20.3917 12.5Z" stroke="#3C2178" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <ul role="menubar" class="nav-links" id="menu">
+                <li role="none">
+                <a role="menuitem" href="#sobrenosotros" class="nav-link btn">Sobre nosotros</a>
+                </li>
+                <li role="none">
+                <a role="menuitem" href="#beneficios-container" class="nav-link btn">Beneficios</a>
+                </li>
+                <li role="none">
+                <a role="menuitem" href="#testimonio-container" class="nav-link btn">Expertos</a>
+                </li>
+                <li role="none">
+                <a role="menuitem" href="#form-section" class="nav-link btn btn--accent">Contacta</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="contenedorprincipal">
+        <img class="header__img" srcset="./img/moon.png" src="./assets/space.jpg" alt="png de la luna" />
+        <div class="contenedor-texto">
+            <h1 class="h1 rise fade-up">DESCUBRE EL UNIVERSO!</h1>
+            <div>
+                <p>
+                    Tu Aventura Espacial ,<br>
+                    Comienza Aquí
+                </p>
+                <a class="button-link" href="">únete ahora</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="sobrenosotros">
+            <div class="sobrenosotros-txt">
+                <h2 class="h2 rise fade-up">Sobre nosostros</h2>
+                <p>
+                    ¡Te damos la bienvenida a Travel Beyond, la vanguardia de la exploración espacial! Fundada en 2022 y lanzada en 2024, somos líderes respaldados por expertos en la industria. Nuestra misión: convertir sueños cósmicos en experiencias reales. Tecnología punta, seguridad y asociaciones de renombre nos destacan.
+                </p>
+                <p>
+                    <br>Únete a nosotros en este emocionante viaje hacia el infinito y más allá. 🚀✨
+                </p>
+            </div>
+            <!--
+            <div class="sobrenosotros-img">
+                <img src="./img/pexels-pixabay-33684.jpg" alt="">
+            </div>
+            -->
+        </section>
+
+        <section id="beneficios-container">
+            <h2 class="h2 rise fade-up">Beneficios de elegirnos</h2>
+            <div class="beneficios-cards">
+                <div class="seguridad item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="37" height="48" viewBox="0 0 37 48" fill="none" alt="Icono candado">
+                        <path d="M29.6999 17.6H28.0999V9.6C28.0999 7.05392 27.0885 4.61212 25.2881 2.81177C23.4878 1.01143 21.046 0 18.4999 0C15.9538 0 13.512 1.01143 11.7117 2.81177C9.91133 4.61212 8.8999 7.05392 8.8999 9.6V17.6H7.2999C5.60309 17.6019 3.9763 18.2767 2.77647 19.4766C1.57663 20.6764 0.901755 22.3032 0.899902 24V41.6C0.901755 43.2968 1.57663 44.9236 2.77647 46.1234C3.9763 47.3233 5.60309 47.9981 7.2999 48H29.6999C31.3967 47.9981 33.0235 47.3233 34.2233 46.1234C35.4232 44.9236 36.098 43.2968 36.0999 41.6V24C36.098 22.3032 35.4232 20.6764 34.2233 19.4766C33.0235 18.2767 31.3967 17.6019 29.6999 17.6ZM24.8999 17.6H12.0999V9.6C12.0999 7.90261 12.7742 6.27475 13.9744 5.07452C15.1747 3.87428 16.8025 3.2 18.4999 3.2C20.1973 3.2 21.8252 3.87428 23.0254 5.07452C24.2256 6.27475 24.8999 7.90261 24.8999 9.6V17.6Z" fill="#EBEBEB"/>
+                    </svg>
+                    <h3>Tu Seguridad, Nuestra Prioridad</h3>
+                    <p>Cada aspecto de tu viaje al espacio está meticulosamente planificado y ejecutado, desde la preparación de la nave hasta el retorno a casa.En Travel Beyond, la seguridad no es negociable</p>
+                </div>
+                <div class="comodidad item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none" alt="Icono ticks">
+                        <path d="M24.8357 0.00107028C11.3387 -0.181229 0.319931 10.8375 0.50223 24.3346C0.682222 37.279 11.2221 47.8189 24.1665 47.9989C37.6659 48.1835 48.6823 37.1647 48.4977 23.6677C48.32 10.721 37.7801 0.181062 24.8357 0.00107028ZM22.8985 22.2081L28.8463 15.4007C29.1685 15.032 29.624 14.8064 30.1126 14.7735C30.6012 14.7406 31.0828 14.9031 31.4516 15.2254C31.8203 15.5476 32.0459 16.0031 32.0788 16.4917C32.1117 16.9803 31.9492 17.4619 31.6269 17.8306L25.6791 24.638C25.5196 24.8206 25.3256 24.97 25.1084 25.0776C24.8911 25.1852 24.6548 25.249 24.4128 25.2653C24.1709 25.2816 23.9282 25.25 23.6984 25.1725C23.4687 25.095 23.2565 24.9729 23.0739 24.8134C22.8913 24.6538 22.7419 24.4599 22.6343 24.2426C22.5267 24.0253 22.4629 23.789 22.4466 23.5471C22.4303 23.3052 22.4619 23.0624 22.5394 22.8327C22.6169 22.6029 22.739 22.3907 22.8985 22.2081ZM18.4149 32.6903C18.0687 33.0363 17.5993 33.2306 17.1099 33.2306C16.6205 33.2306 16.1512 33.0363 15.805 32.6903L10.2725 27.1521C10.1012 26.9806 9.96527 26.777 9.87259 26.553C9.7799 26.3289 9.73226 26.0888 9.73236 25.8464C9.73247 25.6039 9.78033 25.3639 9.87321 25.1399C9.9661 24.9159 10.1022 24.7125 10.2737 24.5411C10.4452 24.3697 10.6488 24.2338 10.8729 24.1411C11.0969 24.0485 11.337 24.0008 11.5795 24.0009C11.8219 24.001 12.062 24.0489 12.2859 24.1418C12.5099 24.2346 12.7134 24.3707 12.8847 24.5422L18.4229 30.0805C18.7678 30.4277 18.9607 30.8977 18.9592 31.3871C18.9577 31.8765 18.7619 32.3452 18.4149 32.6903ZM38.8139 17.8306L25.9053 32.5992C25.739 32.7897 25.5353 32.9441 25.3068 33.0527C25.0784 33.1612 24.8301 33.2217 24.5773 33.2303H24.515C24.2724 33.2303 24.0322 33.1826 23.8081 33.0897C23.584 32.9969 23.3804 32.8608 23.2089 32.6892L17.6776 27.151C17.3315 26.8046 17.1372 26.3349 17.1374 25.8452C17.1376 25.3556 17.3323 24.886 17.6787 24.5399C18.0251 24.1938 18.4948 23.9995 18.9845 23.9998C19.4742 24 19.9437 24.1947 20.2898 24.5411L23.7281 27.9829C23.8175 28.0723 23.9243 28.1424 24.0418 28.1888C24.1594 28.2352 24.2853 28.257 24.4117 28.2528C24.538 28.2486 24.6622 28.2184 24.7764 28.1643C24.8906 28.1101 24.9925 28.033 25.0757 27.9379L36.0367 15.4007C36.359 15.032 36.8145 14.8064 37.3031 14.7735C37.7916 14.7406 38.2733 14.9031 38.642 15.2254C39.0107 15.5476 39.2364 16.0031 39.2693 16.4917C39.3022 16.9803 39.1396 17.4619 38.8174 17.8306H38.8139Z" fill="#EBEBEB"/>
+                    </svg>
+                    <h3>Máxima comodiad</h3>
+                    <p>En Travel Beyond, la comodidad no es solo un lujo, es nuestro compromiso contigo.Desde asientos ergonómicos hasta ambientes personalizados, hacemos que tu viaje sea tan cómodo como emocionante. </p>
+                </div>
+                <div class="exclusividad item" alt="Icono estrella(Exclusividad)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="46" viewBox="0 0 49 46" fill="icono Estrella">
+                        <path d="M38.2985 45.3999C37.9617 45.4012 37.6331 45.2962 37.3594 45.0999L24.4975 35.7752L11.6356 45.0999C11.3608 45.2992 11.0298 45.406 10.6903 45.4047C10.3508 45.4035 10.0206 45.2943 9.74725 45.093C9.47392 44.8917 9.27169 44.6087 9.16979 44.2849C9.0679 43.9611 9.07162 43.6133 9.18041 43.2918L14.1968 28.4337L1.19585 19.5181C0.914236 19.3252 0.701694 19.0473 0.589273 18.725C0.476852 18.4027 0.470444 18.0529 0.570985 17.7267C0.671526 17.4005 0.873747 17.115 1.1481 16.9119C1.42246 16.7088 1.75457 16.5988 2.09591 16.5979H18.1351L22.9754 1.70182C23.0797 1.38022 23.2831 1.09991 23.5566 0.901104C23.83 0.702299 24.1594 0.595215 24.4975 0.595215C24.8356 0.595215 25.165 0.702299 25.4384 0.901104C25.7119 1.09991 25.9153 1.38022 26.0196 1.70182L30.86 16.6029H46.8991C47.2409 16.6027 47.5737 16.712 47.8489 16.9147C48.1241 17.1174 48.3271 17.4028 48.4283 17.7293C48.5294 18.0557 48.5234 18.406 48.4111 18.7288C48.2988 19.0516 48.0861 19.3299 47.8042 19.5231L34.7982 28.4337L39.8116 43.2878C39.8928 43.5283 39.9157 43.7846 39.8783 44.0357C39.8408 44.2868 39.7442 44.5253 39.5964 44.7317C39.4486 44.938 39.2538 45.1062 39.0281 45.2224C38.8024 45.3386 38.5523 45.3995 38.2985 45.3999Z" fill="#EBEBEB"/>
+                    </svg>
+                    <h3>Exclusividad sin igual</h3>
+                    <p>Embárcate en un viaje cósmico hacia lo desconocido, descubre paisajes intergalácticos que desafían la imaginación y vive la auténtica emoción de la gravedad cero. En Travel Beyond, cada momento de tu aventura es una promesa de exploración sin límites.</p>
+                </div>
+                <div class="viajar item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none" alt="Icono Cohete">
+                        <path d="M48.2256 1.93409C48.2251 1.9309 48.2251 1.92764 48.2256 1.92445C48.135 1.52727 47.9352 1.16332 47.6487 0.873658C47.3623 0.583993 47.0006 0.380143 46.6045 0.285106C43.4115 -0.493849 38.3885 0.336537 32.8222 2.56519C27.212 4.81526 21.9554 8.13681 18.4024 11.6962C17.2636 12.829 16.2056 14.0402 15.2362 15.321C12.8436 15.2138 10.7361 15.5546 8.96065 16.3292C2.774 19.0518 1.00715 26.0196 0.536781 28.8804C0.468717 29.2869 0.495368 29.7036 0.61466 30.0981C0.733952 30.4926 0.942667 30.8542 1.22456 31.1549C1.50646 31.4556 1.85393 31.6871 2.23994 31.8316C2.62595 31.976 3.04007 32.0294 3.4501 31.9876H3.46403L10.3557 31.2355C10.3643 31.3233 10.3739 31.4037 10.3814 31.4776C10.4699 32.3174 10.8444 33.1012 11.4422 33.6977L14.8055 37.0632C15.4011 37.6617 16.1847 38.0367 17.0245 38.125L17.2549 38.1496L16.5048 45.0327V45.0467C16.4665 45.4174 16.506 45.792 16.6207 46.1466C16.7354 46.5012 16.9228 46.8279 17.171 47.106C17.4191 47.384 17.7226 47.6072 18.0619 47.7612C18.4013 47.9153 18.7691 47.9969 19.1417 48.0007C19.2907 48.0008 19.4394 47.9886 19.5864 47.9643C22.4633 47.5014 29.4278 45.756 32.1429 39.5361C32.9111 37.7725 33.2508 35.6735 33.1554 33.2852C34.442 32.3179 35.6576 31.2598 36.793 30.119C40.375 26.5553 43.7072 21.3416 45.9337 15.8128C48.1506 10.3097 48.9853 5.24921 48.2256 1.93409ZM36.7545 20.6719C35.8741 21.5532 34.7521 22.1536 33.5304 22.3971C32.3087 22.6406 31.0423 22.5163 29.8913 22.0399C28.7402 21.5634 27.7564 20.7563 27.0642 19.7207C26.372 18.685 26.0025 17.4673 26.0025 16.2216C26.0025 14.9758 26.372 13.7581 27.0642 12.7224C27.7564 11.6868 28.7402 10.8797 29.8913 10.4033C31.0423 9.92684 32.3087 9.80252 33.5304 10.046C34.7521 10.2895 35.8741 10.8899 36.7545 11.7712C37.3446 12.3525 37.8132 13.0452 38.133 13.8093C38.4529 14.5733 38.6176 15.3933 38.6176 16.2216C38.6176 17.0498 38.4529 17.8698 38.133 18.6339C37.8132 19.3979 37.3446 20.0907 36.7545 20.6719Z" fill="#EBEBEB"/>
+                    </svg>
+                    <h3>Viaja sin preocupaciones</h3>
+                    <p>En Travel Beyond, nos encargamos de todo para que tú solo te preocupes por disfrutar. Desde la planificación hasta el regreso, tu única tarea es explorar, mientras nosotros nos encargamos del resto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonio-container">
+            <h2 class="h2 rise fade-up">Expertos que nos avalan</h2>
+            <div class="containerform">
+                <div class="slider">
+                    <input type="radio" name="slider" id="slideOne" checked>
+                    <input type="radio" name="slider" id="slideTwo">
+                    <input type="radio" name="slider" id="slideThree">
+                    <input type="radio" name="slider" id="slideFour">
+
+                    <div class="expertos">
+                        <div class="firstslide">
+                            <img src="https://actualidadaeroespacial.com/wp-content/uploads/2020/10/Miguel-López-Alegr%C3%ADa-161020.jpg" alt="Slide 1">
+                            <h4>Chris Austin Hadfield</h4>
+                            <p>"Me parece una experiencia que va más allá, una experiencia fuera de serie."</p>
+                        </div>
+                        <div class="secondslide">
+                            <img src="https://img.freepik.com/foto-gratis/retrato-empresaria-joven-sonriente-que-sostiene-lentes-mano-que-mira-camara_23-2147943723.jpg" alt="Slide 2">
+                            <h4>Valentina Rodríguez</h4>
+                            <p>"Travel Beyond aporta perspectiva emocionante que puede cambiar la forma en que abordamos la aventura más allá de la Tierra."</p>
+                        </div>
+                        <div class="thirdslide">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzXHm5feb3Rjfw9qRfzVvMhwshJfnkujPtdrNT-YzHLCAYeTOP6n3-l9MQgTLVLdowaqk&usqp=CAU" alt="Slide 3">
+                            <h4>Julie Payette</h4>
+                            <p>“La combinación de tecnología de vanguardia y enfoque en la comodidad establece un estándar completamente nuevo para los viajes espaciales comerciales."</p>
+                        </div>
+                        <div class="fourslide">
+                            <img src="https://radionacional-v3.s3.amazonaws.com/s3fs-public/styles/portadas_relaciona_4_3/public/node/article/field_image/lili_1_0.jpg?h=78433ef2&itok=dr_ULVnO" alt="Slide 4">
+                            <h4>Steve Glenwood MacLean</h4>
+                            <p>"Travel Beyond aporta perspectiva emocionante que puede cambiar la forma en que abordamos la aventura más allá de la Tierra."</p>
+                        </div> 
+                    </div>
+                    <div class="buttons">
+                        <label for="slideOne"></label>
+                        <label for="slideTwo"></label>
+                        <label for="slideThree"></label>
+                        <label for="slideFour"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form-section">
+                <div class="contenedor-formulario contenedor">
+                    <div class="imagen-formulario" alt="imagen suelo de la nasa pisada"></div>
+                    <form class="formulario">
+                        <div class="texto-formulario">
+                            <h2 class="h2 rise fade-up">Solicita más información</h2>
+                            <p>Estamos encantados de que estés interesado en conocer más sobre Travel Beyond, estamos aquí para ayudarte en cada paso del camino. ¡Gracias por confiar en nosotros para obtener la información que necesitas!</p>
+                        </div>
+                        <div class="identidad datos">
+                            <div class="nombre entrada">
+                                <label for="Nombre">Nombre</label>
+                                <input placeholder="Ingresa tu nombre" type="name" id="usuario" required="required" data-rule-required="true">
+                            </div>
+                            <div class="apellidos entrada">
+                                <label for="apellidos">Apellidos</label>
+                                <input placeholder="Ingresa tus apellidos" type="name" id="Apellido" required="required" data-rule-required="true">
+                            </div>
+                        </div>
+                        <div class="entrada datos">
+                            <div class="pais">
+                                <label for="pais">País</label>
+                                <select id="pais" name="pais" required="required" data-rule-required="true" data-msg-required="Debes seleccionar una de las opciones">
+                                    <option value="AL">Albania</option>
+                                    <option value="DE">Alemania</option>
+                                    <option value="AD">Andorra</option>
+                                    <option value="AT">Austria</option>
+                                    <option value="BE">Bélgica</option>
+                                    <option value="BA">Bosnia y Herzegovina</option>
+                                    <option value="BG">Bulgaria</option>
+                                    <option value="BY">Bielorrusia</option>
+                                    <option value="HR">Croacia</option>
+                                    <option value="CY">Chipre</option>
+                                    <option value="DK">Dinamarca</option>
+                                    <option value="ES">España</option>
+                                    <option value="EE">Estonia</option>
+                                    <option value="FI">Finlandia</option>
+                                    <option value="FR">Francia</option>
+                                    <option value="GB">Reino Unido</option>
+                                    <option value="GR">Grecia</option>
+                                    <option value="HU">Hungría</option>
+                                    <option value="IS">Islandia</option>
+                                    <option value="IE">Irlanda</option>
+                                    <option value="IT">Italia</option>
+                                    <option value="KZ">Kazajistán</option>
+                                    <option value="XK">Kosovo</option>
+                                    <option value="LV">Letonia</option>
+                                    <option value="LI">Liechtenstein</option>
+                                    <option value="LT">Lituania</option>
+                                    <option value="LU">Luxemburgo</option>
+                                    <option value="MK">Macedonia del Norte</option>
+                                    <option value="MT">Malta</option>
+                                    <option value="MD">Moldavia</option>
+                                    <option value="MC">Mónaco</option>
+                                    <option value="ME">Montenegro</option>
+                                    <option value="NL">Países Bajos</option>
+                                    <option value="NO">Noruega</option>
+                                    <option value="PL">Polonia</option>
+                                    <option value="PT">Portugal</option>
+                                    <option value="RO">Rumanía</option>
+                                    <option value="RU">Rusia</option>
+                                    <option value="SM">San Marino</option>
+                                    <option value="RS">Serbia</option>
+                                    <option value="SK">Eslovaquia</option>
+                                    <option value="SI">Eslovenia</option>
+                                    <option value="SE">Suecia</option>
+                                    <option value="CH">Suiza</option>
+                                    <option value="UA">Ucrania</option>
+                                    <option value="US">Estados Unidos</option>
+                                </select>
+
+                            </div>
+                            <div class="telefono">
+                                <label for="Telefono">Teléfono</label>
+                                <input placeholder="Ingresa telefono" type="tel" id="telefono">
+                            </div>
+                        </div>
+                        <div class="entrada">
+                            <label for="email">Correo</label>
+                            <input placeholder="Ingresa tu correo" type="email" id="contraseña" required="required" data-rule-required="true">
+                        </div>
+                        <div class="comentario entrada">
+                            <label for="ayuda">¿En que podemos ayudarte?</label>
+                            <input placeholder="Comentanos tu duda y intentaremos ayudarte" type="text" id="mensaje">
+                        </div>
+                        <div class="formulariobbutton">
+                            <button type="submit" class="button-link">Únete Ahora</button>
+                            <button type="button" class="button-link-later">Enviar Más Tarde</button>
+                        </div>
+                    </form>
+                </div>  
+        </section>
+        <footer class="footer">
+            <div class="green-section">
+                <div class="logo">
+                    <img src="./img/Vector.png" alt="Logo de Travel Beyond">
+                </div>
+                <div class="social-media">
+                    <!-- íconos de  redes sociales -->
+                    <a href="#" target="_blank" alt="Icono twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M19.375 4.27735C18.6717 4.58296 17.9275 4.7843 17.166 4.87501C17.9663 4.4064 18.5681 3.66195 18.8586 2.78126C18.102 3.22368 17.2756 3.5341 16.4148 3.69923C16.0524 3.31935 15.6165 3.01716 15.1336 2.811C14.6507 2.60484 14.1309 2.49904 13.6059 2.50001C11.4801 2.50001 9.75977 4.19532 9.75977 6.28516C9.75826 6.57585 9.79157 6.86568 9.85898 7.14844C8.33464 7.07698 6.842 6.68813 5.47656 6.00675C4.11111 5.32537 2.90292 4.36648 1.9293 3.19141C1.58772 3.76724 1.40708 4.42424 1.40625 5.09376C1.40625 6.40626 2.09102 7.56641 3.125 8.2461C2.51239 8.23156 1.91234 8.06942 1.37578 7.77344V7.82032C1.37578 9.65626 2.70391 11.1836 4.46172 11.5313C4.13117 11.6194 3.79053 11.664 3.44844 11.6641C3.20569 11.6645 2.9635 11.6409 2.72539 11.5938C3.21406 13.0977 4.63633 14.1914 6.32109 14.2227C4.9521 15.2777 3.27134 15.848 1.54297 15.8438C1.23618 15.8433 0.929674 15.825 0.625 15.7891C2.38327 16.9118 4.42713 17.5057 6.51328 17.5C13.5977 17.5 17.468 11.7305 17.468 6.72657C17.468 6.56251 17.4637 6.39844 17.4559 6.23829C18.2071 5.70394 18.857 5.03989 19.375 4.27735Z" fill="#3C2178"/></svg>
+                    </a>
+                    <a href="#" target="_blank" alt="Icono facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.75 10.0527C18.75 5.2207 14.832 1.30273 10 1.30273C5.16797 1.30273 1.25 5.2207 1.25 10.0527C1.25 14.4199 4.44922 18.0398 8.63281 18.6969V12.5828H6.41055V10.0527H8.63281V8.125C8.63281 5.93242 9.93945 4.72031 11.9379 4.72031C12.8953 4.72031 13.8969 4.89141 13.8969 4.89141V7.04492H12.793C11.7066 7.04492 11.3668 7.71914 11.3668 8.41211V10.0527H13.7934L13.4059 12.5828H11.3672V18.6977C15.5508 18.041 18.75 14.4211 18.75 10.0527Z" fill="#3C2178"/></svg>
+                    </a>
+                    <a href="#" target="_blank" alt="Icono twitch">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3.125 1.25L1.875 4.375V16.25H5.625V18.75H8.125L10.625 16.25H13.75L18.125 11.875V1.25H3.125ZM16.25 11.25L13.75 13.75H10L7.5 16.25V13.75H4.375V3.125H16.25V11.25Z" fill="#3C2178"/><path d="M12.5 5.58594H14.375V10.625H12.5V5.58594ZM8.125 5.58594H10V10.625H8.125V5.58594Z" fill="#3C2178"/></svg>
+                    </a>
+                    <a href="#" target="_blank" alt="Icono instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M13.6457 2.7082C14.6118 2.71109 15.5375 3.09616 16.2207 3.77931C16.9038 4.46246 17.2889 5.38818 17.2918 6.3543V13.6457C17.2889 14.6118 16.9038 15.5375 16.2207 16.2207C15.5375 16.9038 14.6118 17.2889 13.6457 17.2918H6.3543C5.38818 17.2889 4.46246 16.9038 3.77931 16.2207C3.09616 15.5375 2.71109 14.6118 2.7082 13.6457V6.3543C2.71109 5.38818 3.09616 4.46246 3.77931 3.77931C4.46246 3.09616 5.38818 2.71109 6.3543 2.7082H13.6457ZM13.6457 1.25H6.3543C3.54687 1.25 1.25 3.54687 1.25 6.3543V13.6457C1.25 16.4531 3.54687 18.75 6.3543 18.75H13.6457C16.4531 18.75 18.75 16.4531 18.75 13.6457V6.3543C18.75 3.54687 16.4531 1.25 13.6457 1.25Z" fill="#3C2178"/>
+                            <path d="M14.7395 6.35425C14.5231 6.35425 14.3117 6.2901 14.1318 6.16992C13.9519 6.04974 13.8117 5.87891 13.729 5.67906C13.6462 5.4792 13.6245 5.25929 13.6667 5.04712C13.7089 4.83495 13.8131 4.64006 13.9661 4.4871C14.119 4.33414 14.3139 4.22997 14.5261 4.18776C14.7382 4.14556 14.9582 4.16722 15.158 4.25001C15.3579 4.33279 15.5287 4.47298 15.6489 4.65284C15.7691 4.83271 15.8332 5.04418 15.8332 5.2605C15.8335 5.40422 15.8054 5.54658 15.7506 5.67942C15.6957 5.81226 15.6152 5.93296 15.5135 6.03459C15.4119 6.13621 15.2912 6.21676 15.1584 6.27162C15.0255 6.32648 14.8832 6.35456 14.7395 6.35425ZM10 7.08315C10.5769 7.08315 11.1408 7.25422 11.6205 7.57472C12.1002 7.89523 12.474 8.35077 12.6948 8.88374C12.9155 9.41672 12.9733 10.0032 12.8608 10.569C12.7482 11.1348 12.4704 11.6545 12.0625 12.0624C11.6546 12.4704 11.1348 12.7482 10.569 12.8607C10.0032 12.9732 9.41677 12.9155 8.88379 12.6947C8.35082 12.474 7.89528 12.1001 7.57477 11.6204C7.25427 11.1408 7.08321 10.5768 7.08321 9.99995C7.08403 9.22662 7.3916 8.4852 7.93843 7.93838C8.48526 7.39155 9.22667 7.08398 10 7.08315ZM10 5.62495C9.13471 5.62495 8.28885 5.88154 7.56938 6.36227C6.84992 6.843 6.28916 7.52628 5.95803 8.32571C5.6269 9.12514 5.54026 10.0048 5.70907 10.8535C5.87788 11.7021 6.29456 12.4817 6.90641 13.0935C7.51826 13.7054 8.29782 14.1221 9.14648 14.2909C9.99515 14.4597 10.8748 14.3731 11.6742 14.0419C12.4737 13.7108 13.157 13.15 13.6377 12.4306C14.1184 11.7111 14.375 10.8652 14.375 9.99995C14.375 8.83963 13.9141 7.72683 13.0936 6.90636C12.2731 6.08589 11.1603 5.62495 10 5.62495Z" fill="#3C2178"/>
+                            </svg>
+                    </a>
+                    <!-- Agrega más íconos según sea necesario -->
+                </div>
+            </div>
+            <div class="purple-section">
+                <div class="copyright">
+                    <p>Copyright © 2023 Travel Beyond. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">FAQS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="./nav.js" type="module"></script>
+</body>
+</html>
